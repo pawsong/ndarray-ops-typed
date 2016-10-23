@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
+    "prepublish": "npm test && npm run build",
     "build": "tsc",
     "build:watch": "npm run build -- --watch",
     "test": "mocha --compilers ts:ts-node/register",
@@ -12,6 +13,9 @@
   },
   "author": "Giff Song <giff.song@gmail.com>",
   "license": "MIT",
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "@types/ndarray-types": "github:pawsong/ndarray-types",
     "cwise-compiler": "^1.1.2",
