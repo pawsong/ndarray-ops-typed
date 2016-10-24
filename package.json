@@ -5,9 +5,10 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "prepublish": "npm test && npm run build",
-    "build": "tsc",
+    "build": "npm run clean && tsc",
     "build:watch": "npm run build -- --watch",
+    "clean": "rimraf lib",
+    "prepublish": "npm run build && npm test",
     "test": "mocha --compilers ts:ts-node/register",
     "test:watch": "npm run test -- --watch"
   },
@@ -18,7 +19,7 @@
     "lib"
   ],
   "dependencies": {
-    "@types/ndarray-types": "github:pawsong/ndarray-types",
+    "@types/ndarray-types": "github:voxeline/ndarray-types",
     "cwise-compiler": "^1.1.2",
     "ndarray": "^1.0.18"
   },
@@ -27,6 +28,7 @@
     "@types/mocha": "^2.2.32",
     "chai": "^3.5.0",
     "mocha": "^3.1.2",
+    "rimraf": "^2.5.4",
     "ts-node": "^1.6.0",
     "typescript": "^2.0.3"
   }
