@@ -20,7 +20,7 @@
     "lib"
   ],
   "dependencies": {
-    "@types/ndarray-types": "github:voxeline/ndarray-types",
+    "@types/ndarray": "^1.0.1",
     "cwise-compiler": "^1.1.2",
     "ndarray": "^1.0.18"
   },
