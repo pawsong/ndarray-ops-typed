@@ -9,10 +9,11 @@
     "build:watch": "npm run build -- --watch",
     "start": "npm run build:watch",
     "clean": "rimraf lib",
-    "prepublish": "npm run build && npm test",
-    "preversion": "npm run prepublish",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
     "test": "mocha --compilers ts:ts-node/register",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "prepublish": "npm run lint && npm run build && npm test",
+    "preversion": "npm run prepublish"
   },
   "author": "Giff Song <giff.song@gmail.com>",
   "license": "MIT",
@@ -32,6 +33,7 @@
     "mocha": "^3.1.2",
     "rimraf": "^2.5.4",
     "ts-node": "^1.6.0",
+    "tslint": "^3.15.1",
     "typescript": "^2.0.3"
   }
 }

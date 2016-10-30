@@ -8,9 +8,12 @@ export interface Any {
 }
 
 export default <Any> compile({
-  args:['array'],
+  args: ['array'],
   pre: EmptyProc,
-  body: {args:[{name:'a', lvalue:false, rvalue:true, count:1}], body: 'if(a){return true}', localVars: [], thisVars: []},
-  post: {args:[], localVars:[], thisVars:[], body:'return false'},
+  body: {
+    args: [{name: 'a', lvalue: false, rvalue: true, count: 1}],
+    body: 'if(a){return true}', localVars: [], thisVars: [],
+  },
+  post: {args: [], localVars: [], thisVars: [], body: 'return false'},
   funcName: 'any',
 });

@@ -8,7 +8,7 @@ export interface Map {
 }
 
 export default <Map> makeOp({
-  args:['array', 'array', 'scalar'],
-  body: {args:['a', 'b', 'f'], body:'a=f(b)'},
+  args: ['array', 'array', 'scalar'],
+  body: {args: ['a', 'b', 'f'], body: 'a=f(b)'},
   funcName: 'map',
 });

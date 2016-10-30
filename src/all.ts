@@ -8,9 +8,12 @@ export interface All {
 }
 
 export default <All> compile({
-  args:["array"],
+  args: ['array'],
   pre: EmptyProc,
-  body: {args:[{name:"x", lvalue:false, rvalue:true, count:1}], body: "if(!x){return false}", localVars: [], thisVars: []},
-  post: {args:[], localVars:[], thisVars:[], body:"return true"},
-  funcName: "all"
-})
+  body: {
+    args: [{name: 'x', lvalue: false, rvalue: true, count: 1}],
+    body: 'if(!x){return false}', localVars: [], thisVars: [],
+  },
+  post: {args: [], localVars: [], thisVars: [], body: 'return true'},
+  funcName: 'all',
+});

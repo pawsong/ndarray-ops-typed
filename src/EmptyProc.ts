@@ -3,4 +3,4 @@ export default {
   args: [],
   thisVars: [],
   localVars: [],
-}
+};

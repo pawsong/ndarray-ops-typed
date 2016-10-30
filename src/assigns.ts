@@ -1,5 +1,4 @@
 declare const require: any;
-const compile = require('cwise-compiler');
 import ndarray = require('ndarray');
 
 import makeOp from './makeOp';
@@ -9,7 +8,7 @@ export interface Assigns {
 }
 
 export default <Assigns> makeOp({
-  args:['array', 'scalar'],
-  body: {args:['a', 'b'], body:'a=b'},
+  args: ['array', 'scalar'],
+  body: {args: ['a', 'b'], body: 'a=b'},
   funcName: 'assigns',
 });
