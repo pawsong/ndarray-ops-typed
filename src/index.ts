@@ -22,6 +22,9 @@ export { equals }
 import inf from './inf';
 export { inf }
 
+import map from './map';
+export { map }
+
 import norm1 from './norm1';
 export { norm1 }
 

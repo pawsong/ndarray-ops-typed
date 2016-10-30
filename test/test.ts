@@ -9,6 +9,7 @@ import {
   assigns,
   equals,
   inf,
+  map,
   norm1,
   norm2,
   norm2squared,
@@ -109,6 +110,22 @@ describe('inf', () => {
       x.set(i, 5);
     }
     expect(inf(x)).to.equal(5);
+  });
+});
+
+describe('map', () => {
+  it('should assign the result of calling a provided function on every element', () => {
+    const x = ndarray(new Float64Array(10));
+    const y = ndarray(new Float64Array(10));
+
+    x.set(2, 2);
+    x.set(3, 3);
+    x.set(4, 4);
+    map(y, x, v => v * 2);
+
+    expect(y.get(2)).to.equal(4);
+    expect(y.get(3)).to.equal(6);
+    expect(y.get(4)).to.equal(8);
   });
 });
 
